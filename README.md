@@ -1,20 +1,52 @@
 # Classic Arcade Game Clone Project
 
-## Table of Contents
+In this game you have a Player and Enemies (bugs). The goal of the player is to reach the water, without colliding into any one of the enemies.
 
-- [Instructions](#instructions)
-- [Contributing](#contributing)
+# Game Instruction
 
-## Instructions
+1. TBD
 
-Use this [rubric](https://review.udacity.com/#!/rubrics/2013/view) for self-checking your submission.
+# Objectives
 
-Make sure the functions you write are **object-oriented** - either class functions (like `Player` and `Enemy`) or class prototype functions such as `Enemy.prototype.checkCollisions`. Also make sure that the keyword `this` is used appropriately within your class and class prototype functions to refer to the object the function is called upon.
+1. Complete the project
 
-Your **README.md** file should be updated with instructions on both how to 1. Run and 2. Play your arcade game.
+2. Use object-oriened programming in javascript using classic prototype-style OOP and new ES6 style OOP
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+3. Make minimal game
 
-## Contributing
+# Checklist
 
-This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
+## Game Functions
+
+- [ ] Player can not move off screen
+- [ ] Vehicles cross the screen
+- [ ] Vehicle-player collisions happen logically (not too early or too late)
+- [ ] Vehicle-player collision resets the game
+- [ ] Something happens when player wins
+
+## Object Oriented Code
+
+- [ ] Game objects (player and vehicles) are implemented using JavaScript object-oriented programming features.
+
+## Documentation
+
+- [ ] README file
+- [ ] Comments
+- [ ] Code Quality
+
+# Style Guide
+
+- CSS: [Udacity Frontend Nanodegree Style Guide for CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+
+- HTML: [Udacity Frontend Nanodegree Style Guide for HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+
+- Javascript: [Udacity Frontend Nanodegree Style Guide for Javascript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+
+# Validation
+
+- [ ] [HTML Validation](https://validator.w3.org/)
+- [ ] [CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input)
+
+# Lessons learned
+
+1. TBD
