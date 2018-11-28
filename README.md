@@ -2,9 +2,15 @@
 
 In this game you have a Player and Enemies (bugs). The goal of the player is to reach the water, without colliding into any one of the enemies.
 
+this code is based on [art assets and game engine](https://github.com/udacity/frontend-nanodegree-arcade-game).
+
 # Game Instruction
 
-1. TBD
+1. Move player up, down, left, right
+
+2. Cross the block and reach the water
+
+3. You win
 
 # Objectives
 
@@ -18,21 +24,21 @@ In this game you have a Player and Enemies (bugs). The goal of the player is to 
 
 ## Game Functions
 
-- [ ] Player can not move off screen
-- [ ] Vehicles cross the screen
-- [ ] Vehicle-player collisions happen logically (not too early or too late)
-- [ ] Vehicle-player collision resets the game
-- [ ] Something happens when player wins
+- [x] Player can not move off screen
+- [x] Vehicles cross the screen
+- [x] Vehicle-player collisions happen logically (not too early or too late)
+- [x] Vehicle-player collision resets the game
+- [x] Something happens when player wins
 
 ## Object Oriented Code
 
-- [ ] Game objects (player and vehicles) are implemented using JavaScript object-oriented programming features.
+- [x] Game objects (player and vehicles) are implemented using JavaScript object-oriented programming features.
 
 ## Documentation
 
-- [ ] README file
-- [ ] Comments
-- [ ] Code Quality
+- [x] README file
+- [x] Comments
+- [x] Code Quality
 
 # Style Guide
 
@@ -44,9 +50,9 @@ In this game you have a Player and Enemies (bugs). The goal of the player is to 
 
 # Validation
 
-- [ ] [HTML Validation](https://validator.w3.org/)
-- [ ] [CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input)
+- [x] [HTML Validation](https://validator.w3.org/)
+- [x] [CSS Validation](https://jigsaw.w3.org/css-validator/#validate_by_input)
 
 # Lessons learned
 
-1. TBD
+1. OOP in javascript is similar to other language, but a little different.
