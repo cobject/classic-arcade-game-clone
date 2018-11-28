@@ -4,15 +4,15 @@ const WIDTH = 101;
 const HEIGHT = 83;
 
 // Enemies our player must avoid
-var Enemy = function(row, col) {
+var Enemy = function() {
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.x = row * WIDTH;
-    this.y = col * HEIGHT;
-    this.speed = 0; // TODO
+    this.x = 0;
+    this.y = (parseInt((Math.random() * 100) % 3) + 1) * HEIGHT;
+    this.speed = (Math.random() + 1) * 200;
     this.sprite = 'images/enemy-bug.png';
 };
 
@@ -22,6 +22,8 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
+    this.x = this.x >= 505 ? 0 : this.x + this.speed * dt;
+
 };
 
 // Draw the enemy on the screen, required method for game
@@ -39,7 +41,7 @@ Enemy.prototype.handleCollision = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 class Player {
-    constructor(row, col) {
+    constructor(row = 2, col = 5) {
         this.row = row;
         this.col = col;
         this.x = row * WIDTH;
@@ -88,13 +90,13 @@ class Player {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 var allEnemies = [
-    new Enemy(1, 1),
-    new Enemy(2, 2),
-    new Enemy(3, 3)
+    new Enemy(0, 1),
+    new Enemy(0, 2),
+    new Enemy(0, 3)
 ];
 
 // Place the player object in a variable called player
-var player = new Player(2, 4);
+var player = new Player();
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
