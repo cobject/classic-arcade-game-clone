@@ -10,9 +10,7 @@ var Enemy = function() {
 
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.x = 0;
-    this.y = (parseInt((Math.random() * 100) % 3) + 1) * HEIGHT;
-    this.speed = (Math.random() + 1) * 200;
+    this.reset();
     this.sprite = 'images/enemy-bug.png';
 };
 
@@ -22,8 +20,11 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    this.x = this.x >= 505 ? 0 : this.x + this.speed * dt;
-
+    if(this.x >= 505) {
+        this.reset();
+    } else {
+        this.x = this.x >= 505 ? 0 : this.x + this.speed * dt;
+    }
 };
 
 // Draw the enemy on the screen, required method for game
@@ -35,22 +36,38 @@ Enemy.prototype.handleCollision = function() {
     // TODO
 };
 
+Enemy.prototype.reset = function() {
+    this.x = 0;
+    this.y = (parseInt((Math.random() * 100) % 3) + 1) * HEIGHT;
+    this.speed = (Math.random() + 1) * 200;
+};
+
 
 
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
 class Player {
-    constructor(row = 2, col = 5) {
+    constructor(col = 2, row = 5) {
         this.row = row;
         this.col = col;
-        this.x = row * WIDTH;
-        this.y = col * HEIGHT;
+        this.x = col * WIDTH;
+        this.y = row * HEIGHT;
         this.sprite = 'images/char-boy.png';
     }
 
     update(dt) {
-        // TODO
+        if(this.x <= 0) {
+            this.x = 0;
+        } else if(this.x >= 505 -WIDTH) {
+            this.x = 505 - WIDTH;
+        }
+
+        if(this.y <= 0) {
+            this.y = 0;
+        } else if(this.y >= 5 * HEIGHT) {
+            this.y = 5 * HEIGHT;
+        }
     }
 
     render() {
